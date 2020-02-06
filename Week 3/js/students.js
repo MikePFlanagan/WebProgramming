@@ -5,7 +5,7 @@ var students = '{ "students" : [ {"StudentID" : 1, "EmailAddress": "M.Jackson@AB
      displayStudents(data.students);
  }      
 
-function getStudents(students){
+function getStudents(){
 return JSON.parse(students);
 }
 
@@ -16,7 +16,7 @@ function displayStudents(students){
     for(i = 0; i < students.length; i++){
         var StudentID = students[i].StudentID;
         var EmailAddress = students[i].EmailAddress;
-        tableList += "<tr><td>" + studentID + "</t><td>" + price + "</td>";
+        tableList += "<tr><td>" + StudentID + "</t><td>" + EmailAddress + "</td>";
     
         document.getElementById("Students-list").innerHTML = tableList;
     }
