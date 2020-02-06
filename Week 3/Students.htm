@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <script src="js/students.js"></script>
+      
       <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
         <title>
             Students
@@ -14,39 +16,26 @@
     </head>
 
     <body>
+     <h1>Students</h1>
         <a href="index.htm">home page</a>
         <a href="login page.htm">login page</a>
         <a href="Instructors.htm">instructor page</a>
         <a href="Students.htm">student page</a>
     
-      <h1> List of Students</h1>
-      <table style="width:100%">
      
-      
-   <tr>
-    <th class = "greencolor">Student ID</th>
-    <th class = "greencolor">Email Address</th>
-   </tr>
-    <tr>
-      <td>1</td>
-      <td>M.Jackson@ABCSchool.com</td>      
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>J.Jackson@ABCSchool.com</td>
-      <tr>
-        <td>3</td>
-        <td>R.Jackson@ABCSchool.com</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>T.Jackson@ABCSchool.com</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>J.Jackson2@ABCSchool.com</td>       
-      </tr>
-    </tr>
-  </table>
+       <!-- <p id="studentsJSON"></p>. -->
+ 
+        <table>
+        <thead>
+          <th> Student Id</th>
+          <th> Email Address</th>
+          </thead>
+
+          <tbody id="Students-list">
+
+          </tbody>
+
+      </table>
+      <script>initializeStudents()</script>
     </body>
     </html>
