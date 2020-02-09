@@ -1,4 +1,4 @@
- var instructors = '{ "instructors" : [ {"FirstName" : "James", "MiddleInitial": "T","LastName" : "Kirk"}, {"FirstName": "Schn", "MiddleInitial" : "Tgai", "LastName" : "Spock"}, {"FirstName": "Benjamin", "MiddleInitial" "L", "LastName" : "Sisko"}, {"FirstName": "Jean", "MiddleInitial" "L", "LastName" : "Picard"},{"FirstName" : "Kathryn", "MiddleInitial": "H","LastName" : "Janeway"}, {"FirstName": "Jonathan", "MiddleInitial" : "P", "LastName" : "Archer"}]}';
+ var instructors = '{ "instructors" : [ {"FirstName" : "James", "MiddleInitial": "T","LastName" : "Kirk"}, {"FirstName": "Schn", "MiddleInitial" : "Tgai", "LastName" : "Spock"}, {"FirstName": "Benjamin", "MiddleInitial" : "L", "LastName" : "Sisko"}, {"FirstName": "Jean", "MiddleInitial" : "L", "LastName" : "Picard"},{"FirstName" : "Kathryn", "MiddleInitial": "H","LastName" : "Janeway"}, {"FirstName": "Jonathan", "MiddleInitial" : "P", "LastName" : "Archer"}]}';
        
  function initializeInstructors(){
      var data = getInstructors();
@@ -18,7 +18,7 @@ function displayInstructors(instructors){
         var MiddleInitial = instructors[i].MiddleInitial;
         var LastName = instructors[i].LastName;
         tableList += "<tr><td>" + FirstName + "</t><td>" + MiddleInitial + "</t><td>" + LastName + "</t><td>";
-    
-        document.getElementById("Instructors-List").innerHTML = tableList;
     }
+        document.getElementById("Instructors-List").innerHTML = tableList;
+    
 }

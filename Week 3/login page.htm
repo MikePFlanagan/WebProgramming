@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
+        <script src='js/login.js'></script>
         <title>
             Login Page
         </title>
@@ -13,12 +14,27 @@
         <a href="instructors.htm">instructor page</a>
         <a href="students.htm">student page</a><p>
         <form>
-            UserName:<br>
-            <input type="text" name="UserName"><br>
-            Password:<br>
-            <input type="text" name="Password">
-            Submit:<br>
-            <input type="submit" value="Submit">
+        
+            <div class="form-entry">
+            UserName: <input id= 'user-name' type="text" name="userName"/>
+            <span id='user-name-error' style='visibility:hidden'>Please enter Username.</span>
+            </div>
+
+            <div class="form-entry">
+            Password: <input id='pass-word' type="text" name="passWord"/>
+            <span id='pass-word-error' style='visibility:hidden'>Please enter a Password.</span>
+            </div>
+
+            <div class=form-entry>
+            
+            <input type="submit" value="Submit" onclick="validate()"/>
+            
           </form>
-    </p>
+
+          <div class="links"
+          <span>
+              <a href="index.htm">Home</a>
+          </div>
+    
     </body>
+</html>

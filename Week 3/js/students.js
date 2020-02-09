@@ -17,7 +17,7 @@ function displayStudents(students){
         var StudentID = students[i].StudentID;
         var EmailAddress = students[i].EmailAddress;
         tableList += "<tr><td>" + StudentID + "</t><td>" + EmailAddress + "</t></td>";
-    
-        document.getElementById("Students-list").innerHTML = tableList;
     }
+        document.getElementById("Students-list").innerHTML = tableList;
+    
 }
