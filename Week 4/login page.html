@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <!--removeIf(production)-->
+        <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
+        <!--endRemoveIf(production)-->
+        <!--removeIf(production)-->
+        <script src='js/login.js'></script>
+        <!--endRemoveIf(production)-->
+
+         <!-- inject:css -->
+        <!-- endinject -->
+        
+        <!-- inject:js -->
+        <!-- endinject -->
+        <title>
+            Login Page
+        </title>
+    </head>
+
+    <body>
+        <a href="index.html">home page</a>
+        <a href="login page.html">login page</a>
+        <a href="instructors.html">instructor page</a>
+        <a href="students.html">student page</a><p>
+        <form>
+        
+            <div class="form-entry">
+            UserName: <input id= 'user-name' type="text" name="userName"/>
+            <span id='user-name-error' style='visibility:hidden'>Please enter Username.</span>
+            </div>
+
+            <div class="form-entry">
+            Password: <input id='pass-word' type="text" name="passWord"/>
+            <span id='pass-word-error' style='visibility:hidden'>Please enter a Password.</span>
+            </div>
+
+            <div class=form-entry>
+            
+            <input type="submit" value="Submit" onclick="validate()"/>
+            
+          </form>
+
+          <div class="links"
+          <span>
+              <a href="index.html">Home</a>
+          </div>
+    
+    </body>
+</html>

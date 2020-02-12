@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <!--removeIf(production)-->
+      <script src="js/students.js"></script>
+       <!--endremoveIf(production)-->
+        <!--removeIf(production)-->
+      <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
+      <!--endRemoveIf(production)-->
+
+       <!-- inject:css -->
+        <!-- endinject -->
+        
+        <!-- inject:js -->
+        <!-- endinject -->
+        <title>
+            Students
+        </title>
+        <style>
+          table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+}
+</style>
+    </head>
+
+    <body>
+     
+        <a href="index.html">home page</a>
+        <a href="login page.html">login page</a>
+        <a href="instructors.html">instructor page</a>
+        <a href="students.html">student page</a>
+    
+     
+        <h1>Students</h1>
+ 
+        <table>
+        <thead>
+          <th> Student Id</th>
+          <th> Email Address</th>
+          </thead>
+
+          <tbody id="Students-list">
+
+          </tbody>
+
+      </table>
+      <script>initializeStudents()</script>
+    </body>
+    </html>

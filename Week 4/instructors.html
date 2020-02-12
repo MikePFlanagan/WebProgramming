@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!--removeIf(production)-->
+      <script src="js/instructors.js"></script>
+      <!--endRemoveIf(production)-->
+      
+        <title>
+            Instructors
+        </title>
+         <!--removeIf(production)-->
+      <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
+      <!--endRemoveIf(production)-->
+        <!-- inject:css -->
+        <!-- endinject -->
+        
+        <!-- inject:js -->
+        <!-- endinject -->
+        <style>
+          table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+}
+</style>
+    </head>
+
+    <body>
+     
+        <a href="index.html">home page</a>
+        <a href="login page.html">login page</a>
+        <a href="instructors.html">instructor page</a>
+        <a href="students.html">student page</a>
+    
+     
+        <h1>List of Instructors</h1>
+ 
+        <table>
+        <thead>
+          <th>First Name</th>
+          <th>Middle Initial</th>
+          <th>Last Name</th>
+          </thead>
+
+          <tbody id="Instructors-List">
+
+          </tbody>
+
+      </table>
+      <script>initializeInstructors()</script>
+    </body>
+    </html>
