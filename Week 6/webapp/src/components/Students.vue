@@ -3,32 +3,24 @@
 
 <template>
  <div class="home">
+   
+        
     
      
-        <h1>List of Instructors</h1>
+        <h1>Students</h1>
  
         <table>
         <thead>
-          <th>First Name</th>
-          <th>Middle Initial</th>
-          <th>Last Name</th>
+          <th> Student Id</th>
+          <th> Email Address</th>
           </thead>
 
-          <tbody id="Instructors-List">
+          <tbody id="Students-list">
 
           </tbody>
 
       </table>
-        
-  </div>
 </template>
-
-<script>
-export default {
-  name: 'Instructors'
- 
-}
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
