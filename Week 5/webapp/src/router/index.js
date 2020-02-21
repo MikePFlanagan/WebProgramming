@@ -17,11 +17,11 @@ export default new Router({
       component: Home
     },
     {
-      path: '/Students',
+      path: '/students',
       component: Students
     },
     {
-      path: '/Instructors',
+      path: '/instructors',
       component: Instructors
     }
   ]

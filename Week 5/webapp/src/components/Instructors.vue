@@ -1,92 +1,48 @@
-
-
-
-<template>
- <div class="home">
-    
-     
-        <h1>List of Instructors</h1>
- 
+ <template>
+    <div>
+        <h2 class='section-heading'>List of Instructors</h2>
         <table>
-        <thead>
-          <th>First Name</th>
-          <th>Middle Initial</th>
-          <th>Last Name</th>
-          </thead>
-
-          <tbody id="Instructors-List">
-
-          </tbody>
-
-      </table>
-        
-  </div>
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>MiddleInitial</th>
+                    <th>LastName</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="instructor in instructors" v-bind:key="instructor">
+                    <td>{{ instructor.FirstName}}</td>
+                    <td>{{ instructor.MiddleInitial}}</td>
+                    <td>{{ instructor.LastName }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'Instructors'
- 
-}
+    export default {
+        name: 'Instructors',
+        mounted() {
+            this.instructors = getInstructors();
+        },
+        data () {
+            return {
+                instructors: []
+            }
+        }
+    }
+    function getInstructors() {
+        return JSON.parse(instructors);
+    }
+    var instructors = '[{"FirstName": "James", "MiddleInitial": "T","LastName": "Kirk"}, {"FirstName": "Schn", "MiddleInitial": "Tgai", "LastName": "Spock"}, {"FirstName": "Benjamin", "MiddleInitial": "L", "LastName": "Sisko"}, {"FirstName": "Jean", "MiddleInitial": "L", "LastName": "Picard"},{"FirstName": "Kathryn", "MiddleInitial": "H","LastName": "Janeway"}, {"FirstName": "Jonathan", "MiddleInitial": "P", "LastName": "Archer"}]'
+    
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-body {
-    background-color: lightblue;
-  }
-  
-  #head1 {
-    color:rgb(216, 68, 68);
-    font-size: 18;
-    background-color: rgb(127, 47, 255);
-    margin-left: 20px;
-  }
-
-  h2{
-      color: black;
-    margin-left: 20px;
-
-  }
-
-  h3{
-    color: black;
-  margin-left: 20px;
-
-}
-
-  p{
-      color:rgb(255, 0, 13);
-      text-align: center;
-      font-size: large;
-  }
-  p2{
-    color:rgb(55, 0, 255);
-    text-align: center;
-    font-size: large;
-}
-
-p3{
-    color:rgb(38, 0, 255);
-    text-align: center;
-    font-size: large;
-}
-
-
-
-   
-  th.greencolor{
-    font-size: 18;
-    color: green;
-    font-weight: bold;
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: left;
-}
-
-table{
-    border: 10px solid greenyellow;
-    border-collapse: collapse;
-
-}
+    table, th, td {
+        padding: 10px;
+        border: 5px solid black; 
+        border-collapse: collapse;
+    }
 </style>

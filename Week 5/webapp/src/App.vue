@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Marriage Test" src="./assets/image.jpg">
-    <NavBar/>
-    <router-view msg="Welcome to Your Vue.js App"/>
+    <img alt="FerrelMeme" src="./assets/MarriageTest.jpg">
+    <nav-bar/>
+    <router-view/>
   </div>
 </template>
 
