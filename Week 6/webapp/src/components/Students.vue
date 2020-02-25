@@ -1,84 +1,46 @@
-
-
-
 <template>
- <div class="home">
-   
-        
-    
-     
-        <h1>Students</h1>
- 
+    <div>
+        <h2 class='section-heading'>Students</h2>
         <table>
-        <thead>
-          <th> Student Id</th>
-          <th> Email Address</th>
-          </thead>
-
-          <tbody id="Students-list">
-
-          </tbody>
-
-      </table>
+            <thead>
+                <tr>
+                    <th>Student Id</th>
+                    <th>Email Address</th>                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="student in students" v-bind:key="student">
+                    <td>{{ student.StudentID}}</td>
+                    <td>{{ student.EmailAddress }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </template>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<script>
+    export default {
+        name: 'Students',
+        mounted() {
+            this.students = getStudents();
+        },
+        data () {
+            return {
+                students: []
+            }
+        }
+    }
+    function getStudents() {
+        return JSON.parse(students);
+    }
+    var students = '[{"StudentID": 1, "EmailAddress": "M.Jackson@ABCSchool.com"},{"StudentID": 2, "EmailAddress": "J.Jackson@ABCSchool.com"}, {"StudentID": 3, "EmailAddress": "R.Jackson@ABCSchool.com"}, {"StudentID": 4, "EmailAddress": "T.Jackson@ABCSchool.com"},{"StudentID": 5, "EmailAddress":"J.Jackson@ABCSchool.com"}]'
+    
+</script>
+
 <style scoped>
-body {
-    background-color: lightblue;
-  }
-  
-  #head1 {
-    color:rgb(216, 68, 68);
-    font-size: 18;
-    background-color: rgb(127, 47, 255);
-    margin-left: 20px;
-  }
-
-  h2{
-      color: black;
-    margin-left: 20px;
-
-  }
-
-  h3{
-    color: black;
-  margin-left: 20px;
-
-}
-
-  p{
-      color:rgb(255, 0, 13);
-      text-align: center;
-      font-size: large;
-  }
-  p2{
-    color:rgb(55, 0, 255);
-    text-align: center;
-    font-size: large;
-}
-
-p3{
-    color:rgb(38, 0, 255);
-    text-align: center;
-    font-size: large;
-}
-
-
-
-   
-  th.greencolor{
-    font-size: 18;
-    color: green;
-    font-weight: bold;
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: left;
-}
-
-table{
-    border: 10px solid greenyellow;
-    border-collapse: collapse;
-
-}
+    table, th, td {
+        padding: 10px;
+        border: 5px solid black; 
+        border-collapse: collapse;
+    }
 </style>
