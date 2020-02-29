@@ -1,0 +1,32 @@
+version: '3'
+services:
+
+  webapp:
+    build: ./webapp
+    image: mpflan83/webapp
+    container_name: webapp
+    ports:
+     - "8080:80"
+    depends_on:
+      - webapi
+
+  webapi:
+    build: ./webapi
+    image: mpflan83/webapi
+    container_name: webapi
+    ports:
+     - "8081:80"
+    depends_on:
+      - dbserver
+
+  dbserver:
+    image: postgres
+    container_name: dbserver
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+ 
+volumes:
+  db_data:
+    external: true

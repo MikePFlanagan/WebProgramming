@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "webapp",
+			"path": "."
+		},
+		{
+			"name": "webapi",
+			"path": "C:\\Users\\Mike\\Desktop\\Web Programming\\Week 6\\webapi"
+		},
+		{
+			"name": "Database",
+			"path": "C:\\Users\\Mike\\Desktop\\Web Programming\\Week 6\\webapi\\Database"
+		}
+	],
+	"settings": {}
+}
