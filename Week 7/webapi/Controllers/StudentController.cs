@@ -19,66 +19,67 @@ namespace webapi.Controllers
         [HttpGet]
         public ActionResult<List<Student>> GetAllStudents()
         {
-            var result = _dbContext.Student.ToList();
+            List<Student> list = _dbContext.Student.ToList();
+            var result = list;
             return Ok(result);
         }
 
-          [HttpGet("{studentId}")]
-        public ActionResult<Student> GetStudent(int studentId)
-        {
-            var student = _dbContext.Student
-                .SingleOrDefault(p => p.StudentId == studentId);
+        //   [HttpGet("{studentId}")]
+        // public ActionResult<Student> GetStudent(int studentId)
+        // {
+        //     var student = _dbContext.Student
+        //         .SingleOrDefault(p => p.StudentId == studentId);
 
-            if (student != null) {
-                return student;
-            } else {
-                return NotFound();
-            }
-        }
+        //     if (student != null) {
+        //         return student;
+        //     } else {
+        //         return NotFound();
+        //     }
+        // }
 
-         [HttpPost]
-        public ActionResult<Student> AddStudent(Student student)
-        {
-            _dbContext.Student.Add(student);
-            _dbContext.SaveChanges();
+        //  [HttpPost]
+        // public ActionResult<Student> AddStudent(Student student)
+        // {
+        //     _dbContext.Student.Add(student);
+        //     _dbContext.SaveChanges();
 
-            // return CreatedAtAction(nameof(GetStudent), new { id = student.student_Id }, student);
+        //     // return CreatedAtAction(nameof(GetStudent), new { id = student.student_Id }, student);
 
-            return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status201Created);
-        }
+        //     return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status201Created);
+        // }
 
-        [HttpDelete("{studentId}")]
-        public ActionResult DeleteStudent (int studentId)
-        {
-            var student = new Student{StudentId = studentId};
+        // [HttpDelete("{studentId}")]
+        // public ActionResult DeleteStudent (int studentId)
+        // {
+        //     var student = new Student{tudentId = studentId};
 
-            _dbContext.Student.Attach(student);
-            _dbContext.Student.Remove(student);
-            _dbContext.SaveChanges();
+        //     _dbContext.Student.Attach(student);
+        //     _dbContext.Student.Remove(student);
+        //     _dbContext.SaveChanges();
 
-            return Ok();
-        }
+        //     return Ok();
+        // }
 
     
 
-        [HttpPut("{studentId}")]
-        public ActionResult UpdateStudent(int studentId, Student studentUpdate)
-        {
-            var student = _dbContext.Student
-                .SingleOrDefault(p => p.StudentId == studentId);
+        // [HttpPut("{studentId}")]
+        // public ActionResult UpdateStudent(int studentId, Student studentUpdate)
+        // {
+        //     var student = _dbContext.Student
+        //         .SingleOrDefault(p => p.StudentId == studentId);
 
-            if (student != null)
-            {
-                student.StudentId = studentUpdate.StudentId;
-                student.EmailAddress = studentUpdate.EmailAddress;
+        //     if (student != null)
+        //     {
+        //         student.StudentId = studentUpdate.StudentId;
+        //         student.EmailAddress = studentUpdate.EmailAddress;
                
 
-                _dbContext.Update(student);
+        //         _dbContext.Update(student);
 
-                _dbContext.SaveChanges();
-            }
+        //         _dbContext.SaveChanges();
+        //     }
 
-            return NoContent();
-        }
+        //     return NoContent();
+        // }
     }
 }
