@@ -19,9 +19,8 @@ namespace webapi.Controllers
         [HttpGet]
         public ActionResult<List<Student>> GetAllStudents()
         {
-            List<Student> list = _dbContext.Student.ToList();
-            var result = list;
-            return Ok(result);
+           var result = _dbContext.student.ToList();
+           return Ok(result);
         }
 
         //   [HttpGet("{studentId}")]

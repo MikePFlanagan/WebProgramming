@@ -8,7 +8,7 @@ namespace Database
         {         
         }
         
-        public DbSet<Student> Student { get; set; }
+        public DbSet<Student> student { get; set; }
        
     }
 }
