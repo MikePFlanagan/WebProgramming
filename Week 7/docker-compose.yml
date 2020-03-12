@@ -3,7 +3,7 @@ services:
 
   webapp:
     build: ./webapp
-    image: oitgaden/webapp
+    image: mpflan83/webapp
     container_name: webapp
     ports:
      - "8080:80"
@@ -12,7 +12,7 @@ services:
 
   webapi:
     build: ./webapi
-    image: oitgaden/webapi
+    image: mpflan83/webapi
     container_name: webapi
     ports:
      - "8081:80"

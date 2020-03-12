@@ -24,10 +24,11 @@
             With splashy graphics and stuff. So I can wow potential female companions and employers with my awesome (or not so awesome skills)
         </p>
         <h3>I will also code for money.</h3>
-<p1>I am a college student and i have been in school for a rediculously long time. I am tired of being a poor boy. 
-    If you can help me out that would cool. Ideally a job that pays 6 ^100000 dollars per minute, but whatever you can donate would be great.
+
+  <p1>I am a college student and i have been in school for a rediculously long time. I am tired of being a poor boy. If you can help me out that would cool. Ideally a job that pays 6 ^100000 dollars per minute, but whatever you can donate would be great.
 I accept Cash App, Venmo, Google Pay, Paypal, Bitcoin, Etherium, basically whatever way of sending money you can think of I'll find a way to accept it if you I might plan on
-putting easy links on the page here as well as some future point in time.        </p1> 
+putting easy links on the page here as well as some future point in time.       
+  </p1> 
         <h3>I will also code if you pay my rent.</h3>
         <p2>
             This is pretty self explanatory as well. If you could pay my rent for me that would sweet.
@@ -74,6 +75,11 @@ body {
       text-align: center;
       font-size: large;
   }
+   p1{
+      color:rgb(255, 0, 13);
+      text-align: center;
+      font-size: large;
+   }
   p2{
     color:rgb(55, 0, 255);
     text-align: center;
